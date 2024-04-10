@@ -1,0 +1,40 @@
+# ------------------------------------
+#   官方手册: https://manual.serverless-devs.com/user-guide/aliyun/#fc3
+#   有问题快来钉钉群问一下吧：33947367
+# ------------------------------------
+
+edition: 3.0.0
+name: flask-app
+access: 'undefined'
+vars: 
+  region: 'cn-hangzhou'
+resources:
+  framework: 
+    component: fc3 
+    props: 
+      region: ${vars.region} 
+      description: Serverless Devs Web Framework Function
+      runtime: custom.debian10
+      customRuntimeConfig:
+        command:
+          - python3
+          - index.py
+        port: 9000
+      environmentVariables:
+        PYTHONPATH: /opt/python
+      instanceConcurrency: 100
+      timeout: 60
+      functionName: 'flask-ouyw'
+      code: ./code
+      layers:
+        - acs:fc:${this.props.region}:official:layers/Python3-Flask2x/versions/2
+  fc3_domain_0:
+    component: fc3-domain
+    props:
+      region: ${vars.region}
+      domainName: auto
+      protocol: HTTP
+      routeConfig:
+        routes:
+          - path: /*
+            functionName: ${resources.framework.props.functionName}
