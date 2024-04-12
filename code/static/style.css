@@ -62,7 +62,7 @@ a{
     right: 10px;
     transform: translateY(-50%);
     display: block;
-    background: url("../image/search.jpg") no-repeat;
+    background: url("./search.jpg") no-repeat;
     background-size: 100% 100%;
     width: 28px;
     height: 23px;
@@ -209,7 +209,7 @@ a{
     height: 73px;
     text-align: center;
     line-height: 73px;
-    background: url("../image/itemBg.gif") no-repeat;
+    background: url("./itemBg.png") no-repeat;
     background-size: 100% 100%;
     color: #fff;
     padding-right: 10px;
@@ -392,7 +392,7 @@ a{
     -moz-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
-    background: url("../image/search.jpg") no-repeat;
+    background: url("./search.jpg") no-repeat;
     background-size: 100% 100%;
 }
 .main .share .share_box .right input{

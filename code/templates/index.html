@@ -25,12 +25,12 @@
                     <div class="bot">           
                         <a href="" class="on">首页</a>
                         <a href="{{url_for('企业简介')}}">企业简介</a>
-                        <a href="{{url_for('下属企业')}}">下属企业</a>
-                        <a href="{{url_for('产品中心')}}">产品中心</a>
-                        <a href="{{url_for('主营业务')}}">主营业务</a>
-                        <a href="{{url_for('企业文化')}}">企业文化</a>
-                        <a href="{{url_for('企业招聘')}}">企业招聘</a>
-                        <a href="{{url_for('联系我们')}}">联系我们</a>
+                        <a href="">下属企业</a>
+                        <a href="">产品中心</a>
+                        <a href="">主营业务</a>
+                        <a href="">企业文化</a>
+                        <a href="">企业招聘</a>
+                        <a href="">联系我们</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,9 @@
                 <div class="new_list">
                     <div class="news_item">
                         <p>
-                            <span class="tit">最新发布精美小产品美甲贴片...</span>
+                            <a href="{{url_for('news')}}">
+                                <span class="tit">最新发布精美小产品美甲贴片...</span>
+                            </a>                           
                             <span class="time">[2024-02-03]</span>
                         </p>
                         <p>
@@ -83,10 +85,10 @@
                     <div class="news_item">
                         <div class="new_middle">
                             <div class="tips">
-                                111
+                                贴片甲
                             </div>
                             <div class="news_img">
-                                <img src="./static/goods1.png" alt="">
+                                <img src="../static/goods1.png" alt="">
                             </div>
                             <div class="msg">
                                 <p class="tit">
@@ -98,11 +100,11 @@
                         </div>
                         <div class="new_middle">
                             <div class="tips">
-                                111
+                                贴片甲
                             </div>
                             
                             <div class="news_img">
-                                <img src="./static/goods1.png" alt="">
+                                <img src="../static/goods1.png" alt="">
                             </div>
                             <div class="msg">
                                 <p class="tit">
@@ -114,10 +116,10 @@
                         </div>
                         <div class="new_middle">
                             <div class="tips">
-                                111
+                                贴片甲
                             </div>
                             <div class="news_img">
-                                <img src="./static/goods1.png" alt="">
+                                <img src="../static/goods1.png" alt="">
                             </div>
                             <div class="msg">
                                 <p class="tit">
@@ -130,10 +132,10 @@
                     </div>
                     <div class="news_item">
                         <div class="top_img">
-                            <img src="./static/goods2.png" alt="">
+                            <img src="../static/goods2.png" alt="">
                         </div>
-                        <p>服务热线：13721053979</p>
-                        <p>企业电话：19822670672</p>
+                        <p>服务热线：19822670672</p>
+                        <p>企业电话：13721053979</p>
                         <p>企业地址：xxxxxxxxxxxxxxxx
                             xxxxxx</p>
                     </div>
@@ -149,11 +151,11 @@
                 <div class="list">
                     <div class="item">
                         <div class="top_img">
-                            <img src="./static/goods3.png" alt="">
+                            <img src="../static/goods3.png" alt="">
                         </div>
                         <div class="txt">
                             <span>业务名称</span>
-                            <img src="./static/arrows.jpg" alt="">
+                            <img src="../static/arrows.jpg" alt="">
                         </div>
                     </div>
                     <div class="item">
@@ -167,7 +169,7 @@
                     </div>
                     <div class="item">
                         <div class="top_img">
-                            <img src="./static/goods3.png" alt="">
+                            <img src="../static/goods3.png" alt="">
                         </div>
                         <div class="txt">
                             <span>业务名称</span>
@@ -176,7 +178,7 @@
                     </div>
                     <div class="item">
                         <div class="top_img">
-                            <img src="./static/goods3.png" alt="">
+                            <img src="../static/goods3.png" alt="">
                         </div>
                         <div class="txt">
                             <span>业务名称</span>
@@ -300,4 +302,9 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementByClass('tit').addEventListener('click', function() {
+    window.location.href = 'https://www.example.com'; // 将这里的URL替换为你想要跳转的地址
+});
+</script>
 </html>
